@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Utilion | Piezas funcionales en 3D</title>
+    <title>Utilion Store | Piezas únicas en 3D</title>
 
     <meta name="description"
-          content="Repuestos, accesorios y piezas funcionales fabricadas mediante impresión 3D.">
+          content="Figuras, lámparas y piezas personalizadas fabricadas mediante impresión 3D.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,18 +24,29 @@
             line-height: 1.5;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             border-bottom: 1px solid #e5e5e5;
-            padding: 20px 6%;
+            padding: 16px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: #fff;
         }
 
         .logo {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: -1px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 52px;
+            width: auto;
+            display: block;
         }
 
         nav a {
@@ -42,10 +54,19 @@
             text-decoration: none;
             margin-left: 25px;
             font-size: 14px;
+            font-weight: 600;
         }
 
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            padding: 100px 6%;
+            padding: 110px 6%;
             max-width: 1200px;
             margin: auto;
         }
@@ -73,7 +94,17 @@
             text-decoration: none;
             font-weight: 600;
             border-radius: 4px;
+            transition: 0.2s ease;
         }
+
+        .button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           CATEGORÍAS
+        ========================= */
 
         .categories {
             background: #f5f5f5;
@@ -97,7 +128,17 @@
             font-size: 20px;
             font-weight: 700;
             border: 1px solid #ddd;
+            transition: 0.2s ease;
         }
+
+        .category:hover {
+            transform: translateY(-3px);
+            border-color: #111;
+        }
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
 
         .products {
             padding: 80px 6%;
@@ -119,6 +160,12 @@
         .product {
             border: 1px solid #ddd;
             padding: 20px;
+            transition: 0.2s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         .product-image {
@@ -145,6 +192,10 @@
             font-size: 18px;
         }
 
+        /* =========================
+           CONTACTO
+        ========================= */
+
         .problem {
             background: #111;
             color: white;
@@ -163,6 +214,10 @@
             color: #ccc;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             padding: 30px 6%;
             border-top: 1px solid #ddd;
@@ -170,41 +225,77 @@
             font-size: 14px;
         }
 
+        /* =========================
+           MÓVIL
+        ========================= */
+
         @media (max-width: 800px) {
+
             nav {
                 display: none;
+            }
+
+            .hero {
+                padding: 70px 6%;
             }
 
             .category-grid,
             .product-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
         }
 
         @media (max-width: 500px) {
+
+            .logo img {
+                height: 42px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
             .category-grid,
             .product-grid {
                 grid-template-columns: 1fr;
             }
+
         }
+
     </style>
 </head>
 
 <body>
 
+<!-- =========================
+     CABECERA
+========================= -->
+
 <header>
-    <div class="logo">UTILION</div>
+
+    <a href="/" class="logo">
+        <img src="Logo_Utilion.png" alt="Utilion Store">
+    </a>
 
     <nav>
         <a href="#productos">Productos</a>
         <a href="#categorias">Categorías</a>
         <a href="#contacto">¿No encuentras tu pieza?</a>
     </nav>
+
 </header>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-    <h1>Piezas que vuelven a funcionar.</h1>
+    <h1>
+        Piezas que vuelven a funcionar.
+    </h1>
 
     <p>
         Repuestos, accesorios y soluciones funcionales
@@ -217,24 +308,49 @@
 
 </section>
 
+
+<!-- =========================
+     CATEGORÍAS
+========================= -->
+
 <section class="categories" id="categorias">
 
-    <h2>Encuentra tu solución</h2>
+    <h2>
+        Encuentra tu solución
+    </h2>
 
     <div class="category-grid">
 
-        <div class="category">Motos</div>
-        <div class="category">Mountain Bike</div>
-        <div class="category">Camper</div>
-        <div class="category">Taller</div>
+        <div class="category">
+            Motos
+        </div>
+
+        <div class="category">
+            Mountain Bike
+        </div>
+
+        <div class="category">
+            Camper
+        </div>
+
+        <div class="category">
+            Taller
+        </div>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     PRODUCTOS
+========================= -->
+
 <section class="products" id="productos">
 
-    <h2>Piezas destacadas</h2>
+    <h2>
+        Piezas destacadas
+    </h2>
 
     <div class="product-grid">
 
@@ -244,7 +360,9 @@
                 Próximamente
             </div>
 
-            <h3>Producto 01</h3>
+            <h3>
+                Producto 01
+            </h3>
 
             <p>
                 Pieza funcional fabricada en 3D.
@@ -256,13 +374,16 @@
 
         </div>
 
+
         <div class="product">
 
             <div class="product-image">
                 Próximamente
             </div>
 
-            <h3>Producto 02</h3>
+            <h3>
+                Producto 02
+            </h3>
 
             <p>
                 Repuesto optimizado para mayor resistencia.
@@ -274,13 +395,16 @@
 
         </div>
 
+
         <div class="product">
 
             <div class="product-image">
                 Próximamente
             </div>
 
-            <h3>Producto 03</h3>
+            <h3>
+                Producto 03
+            </h3>
 
             <p>
                 Accesorio diseñado para uso real.
@@ -296,9 +420,16 @@
 
 </section>
 
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
 <section class="problem" id="contacto">
 
-    <h2>¿No encuentras tu pieza?</h2>
+    <h2>
+        ¿No encuentras tu pieza?
+    </h2>
 
     <p>
         Envíanos unas fotos y cuéntanos qué necesitas.
@@ -312,9 +443,17 @@
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     © 2026 Utilion — Diseño y fabricación digital.
+
 </footer>
+
 
 </body>
 </html>
